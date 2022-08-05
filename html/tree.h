@@ -78,7 +78,7 @@ void destructor(T1* p)
 };
 
 template<class T>
-class tree_node_ { // size: 5*4=20 bytes (on 32 bit arch), can be reduced by 8.
+class HTMLCXX_EXPORT tree_node_ { // size: 5*4=20 bytes (on 32 bit arch), can be reduced by 8.
    public:
       tree_node_<T> *parent;
       tree_node_<T> *first_child, *last_child;
@@ -88,7 +88,7 @@ class tree_node_ { // size: 5*4=20 bytes (on 32 bit arch), can be reduced by 8.
 //__attribute__((packed));
 
 template <class T, class tree_node_allocator = std::allocator<tree_node_<T> > >
-class tree {
+class HTMLCXX_EXPORT tree {
    protected:
       typedef tree_node_<T> tree_node;
    public:

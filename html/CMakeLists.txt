@@ -16,6 +16,10 @@ set(HTMLCXX_PUBLIC_HEADERS
     Uri.h
     CharsetConverter.h
     Extensions.h
+    tree.h
+    utils.h
+    wincstring.h
+    debug.h
     htmlcxx_export.h)
 
 find_package(Iconv REQUIRED)
