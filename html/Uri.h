@@ -4,10 +4,11 @@
 #include <string>
 #include <climits>
 #include <stdexcept>
+#include "htmlcxx_export.h"
 
 namespace htmlcxx
 {
-	class Uri
+	class HTMLCXX_EXPORT Uri
 	{
 		public:
 

@@ -4,10 +4,11 @@
 #include <iconv.h>
 #include <string>
 #include <stdexcept>
+#include "htmlcxx_export.h"
 
 namespace htmlcxx
 {
-	class CharsetConverter
+	class HTMLCXX_EXPORT CharsetConverter
 	{
 		public:
 			class Exception : public std::runtime_error
@@ -17,7 +18,7 @@ namespace htmlcxx
 						: std::runtime_error(arg) {}
 			};
 			
-			CharsetConverter(const std::string &from, const std::string &to) throw (Exception);
+			CharsetConverter(const std::string &from, const std::string &to);
 			~CharsetConverter();
 			
 			std::string convert(const std::string &input);

@@ -3,12 +3,13 @@
 
 #include "ParserSax.h"
 #include "tree.h"
+#include "htmlcxx_export.h"
 
 namespace htmlcxx
 {
 	namespace HTML
 	{
-		class ParserDom : public ParserSax
+		class HTMLCXX_EXPORT ParserDom : public ParserSax
 		{
 			public:
 				ParserDom() {}

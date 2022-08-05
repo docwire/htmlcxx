@@ -4,12 +4,13 @@
 #include <string>
 
 #include "Node.h"
+#include "htmlcxx_export.h"
 
 namespace htmlcxx
 {
 	namespace HTML
 	{
-		class ParserSax
+		class HTMLCXX_EXPORT ParserSax
 		{
 			public:
 				ParserSax() : mpLiteral(0), mCdata(false) {}
@@ -60,6 +61,6 @@ namespace htmlcxx
 	}//namespace HTML
 }//namespace htmlcxx
 
-#include "ParserSax.tcc"
+#include "ParserSax.inl"
 
 #endif

@@ -4,10 +4,11 @@
 #include <map>
 #include <string>
 #include <utility>
+#include "htmlcxx_export.h"
 
 namespace htmlcxx {
 	namespace HTML {
-		class Node {
+		class HTMLCXX_EXPORT Node {
 
 			public:
 				Node() {}

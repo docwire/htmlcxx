@@ -7,15 +7,15 @@
 using namespace std;
 using namespace htmlcxx;
 
-CharsetConverter::CharsetConverter(const string &from, const string &to) throw (Exception)
+CharsetConverter::CharsetConverter(const string &from, const string &to)
 {
 	mIconvDescriptor = iconv_open(to.c_str(), from.c_str());
 	if (mIconvDescriptor == (iconv_t)(-1))
 	{
 		const char *error_str = strerror(errno);
 		int size = strlen(error_str) + from.length() + to.length() + 26;
-		char error[size];
-		snprintf(error, size, "Can't convert from %s to %s: %s", from.c_str(), to.c_str(), error_str);
+		std::string error{};
+		snprintf(error.data(), size, "Can't convert from %s to %s: %s", from.c_str(), to.c_str(), error_str);
 		throw Exception(error);
 	}
 }

@@ -4,10 +4,11 @@
 #include <set>
 #include <string>
 #include "ci_string.h"
+#include "htmlcxx_export.h"
 
 namespace htmlcxx
 {
-	class Extensions
+	class HTMLCXX_EXPORT Extensions
 	{
 		public:
 			Extensions() {}
